@@ -45,7 +45,7 @@ jobs:
           ip addr
       - name:  complite ledee
         run: |
-          sh r68s_auto.sh
+          sh x86_auto.sh
       - name:  delete network
         if: always()
         env:
