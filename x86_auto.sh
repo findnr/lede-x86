@@ -59,7 +59,7 @@ sed -i "s/OpenWrt /Cymrouter build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" pa
 # 修改默认主题
 #sed -i "s/luci-theme-bootstrap/luci-theme-argon/g" feeds/luci/collections/luci/Makefile
 
-cat /home/runner/work/lede-x86/lede-x86/r68s.conf > ./.config
+cat /home/runner/work/lede-x86/lede-x86/x86.conf > ./.config
 # cat ../r68s.conf > ./.config
 
 sed -i 's/^[ \t]*//g' ./.config
