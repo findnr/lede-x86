@@ -13,6 +13,8 @@ on:
         required: true
       ZEROTIER_TOKEN:
         required: true
+      CYM_TOKEN:
+        required: true
 jobs:
   ubuntu-job:
     runs-on: ${{ inputs.runs-on }}
@@ -79,11 +81,11 @@ jobs:
           echo "###--------------------------------------------###"
           ls -lh
           cd file && ls -lh
-          echo "strDate=$(TZ=UTC-8 date +%Y-%m)" >> $GITHUB_ENV
+          echo "strDate=$(TZ=UTC-8 date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
       - name: Upload release asset
         uses: svenstaro/upload-release-action@v2
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: ${{ secrets.CYM_TOKEN }}
           tag: ${{ env.strDate }}
           file_glob: true
           overwrite: true
