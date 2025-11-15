@@ -23,17 +23,17 @@ cd /mnt
 file_path='x86'
 
 if [ -e "$file_path" ]; then
-    echo "r68s file exits"
+    echo "x86 file exits"
 else
     git clone https://github.com/coolsnowwolf/lede.git x86
 fi
 
 cd x86
-rm -rf .config tmp
-git restore target/linux/rockchip/Makefile
-git restore package/base-files/files/bin/config_generate
-git restore feeds.conf.default
-git pull
+# rm -rf .config tmp
+# git restore target/linux/rockchip/Makefile
+# git restore package/base-files/files/bin/config_generate
+# git restore feeds.conf.default
+# git pull
 #cd package/small-package
 #git pull
 #cd ..
