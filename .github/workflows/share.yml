@@ -47,7 +47,7 @@ jobs:
           ip addr
       - name:  complite lede
         run: |
-          sh x86_auto.sh 2>&1 | tee ledee_build.log
+          sh x86_auto.sh 2>&1 | tee lede_build.log
       - name:  delete network
         if: always()
         env:
