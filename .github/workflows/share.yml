@@ -45,9 +45,9 @@ jobs:
         run: |
           sh common/middify_password.sh
           ip addr
-      - name:  complite ledee
+      - name:  complite lede
         run: |
-          sh x86_auto.sh
+          sh x86_auto.sh 2>&1 | tee ledee_build.log
       - name:  delete network
         if: always()
         env:
