@@ -25,10 +25,10 @@ file_path='x86'
 if [ -e "$file_path" ]; then
     echo "r68s file exits"
 else
-    git clone https://github.com/coolsnowwolf/lede.git r68s
+    git clone https://github.com/coolsnowwolf/lede.git x86
 fi
 
-cd r68s
+cd x86
 rm -rf .config tmp
 git restore target/linux/rockchip/Makefile
 git restore package/base-files/files/bin/config_generate
@@ -38,13 +38,13 @@ git pull
 #git pull
 #cd ..
 #cd ..
-sed -i '$a src-git istore https://github.com/linkease/istore;main' feeds.conf.default
-sed -i '$a src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main' feeds.conf.default
+#sed -i '$a src-git istore https://github.com/linkease/istore;main' feeds.conf.default
+#sed -i '$a src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main' feeds.conf.default
 #sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main' feeds.conf.default
-sed -i '$a src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2.git;main' feeds.conf.default
+#sed -i '$a src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2.git;main' feeds.conf.default
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld.git' feeds.conf.default
 # sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
-./scripts/feeds uninstall -a
+#./scripts/feeds uninstall -a
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
