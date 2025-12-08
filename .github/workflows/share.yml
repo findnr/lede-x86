@@ -77,7 +77,8 @@ jobs:
         run: |
           ls -l /mnt/x86/bin/targets/x86/64/
           mkdir file
-          mv /mnt/x86/bin/targets/x86/64/*.img.gz file/
+          mv /mnt/x86/bin/targets/x86/64/openwrt-x86-64-generic-squashfs-rootfs.img.gz file/
+          mv /mnt/x86/bin/targets/x86/64/openwrt-x86-64-generic-squashfs-combined-efi.* file/
           echo "###--------------------------------------------###"
           ls -lh
           cd file && ls -lh
