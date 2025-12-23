@@ -70,4 +70,4 @@ sed -i 's/^[ \t]*//g' ./.config
 
 make defconfig
 # make menuconfig
-make -j$(nproc) V=s
+make -j1 V=s
