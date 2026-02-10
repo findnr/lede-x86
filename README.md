@@ -1,4 +1,5 @@
 # lede-x86
+- 2026-02-10：更新了passwall的新地址：sed -i '1i src-git passwall_packages https://github.com/Openwrt-Passwall/openwrt-passwall-packages.git;main' feeds.conf.default sed -i '2i src-git passwall_luci https://github.com/Openwrt-Passwall/openwrt-passwall.git;main' feeds.conf.default sed -i '3i src-git passwall2 https://github.com/Openwrt-Passwall/openwrt-passwall2.git;main' feeds.conf.default
 - 2025-12-09:增加打包多平台的包：</br>
   Build LiveCD image (ISO) ，</br>
   Build PVE/KVM image files (QCOW2)，直接导入可使用</br>
